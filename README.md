@@ -1,6 +1,6 @@
 # Palets Jiménez: web
 
-Rediseño de paletsjimenez.com en tres páginas:
+Rediseño de paletsjimenez.com en tres páginas, con la paleta "360° Logística y Sostenibilidad" (azul marino #102A43 = estructura y transporte, verde #2B7A4B = reciclaje, naranja #E65100 = solo botones de acción; roles en `css/roles.css`):
 
 - **index.html**: página única con scroll y las secciones Inicio, Empresa, Procesos, Palets, Decoración y Ubicaciones.
 - **catalogo.html**: catálogo con filtros y fichas de producto.

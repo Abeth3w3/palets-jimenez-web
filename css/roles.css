@@ -1,0 +1,100 @@
+/* =========================================================
+   ROLES DE COLOR — se carga después del resto de hojas.
+   Naranja = acción comercial · Verde = sostenibilidad · Azul = estructura y transporte
+   ========================================================= */
+
+/* ---------- Botones ---------- */
+.btn--primary {           /* Acción comercial: pedir presupuesto, comprar, consultar */
+  --_bg: var(--orange-600); --_fg: #fff; --_bd: var(--orange-600);
+  box-shadow: 0 6px 18px rgb(230 81 0 / .28);
+}
+.btn--primary:hover { --_bg: var(--orange-700); --_bd: var(--orange-700); color: #fff; }
+.btn--navy { --_bg: var(--navy-900); --_fg: #fff; --_bd: var(--navy-900); }
+.btn--navy:hover { --_bg: var(--navy-600); --_bd: var(--navy-600); color: #fff; }
+.btn--light { --_bg: #fff; --_fg: var(--navy-900); --_bd: #fff; }
+.btn--light:hover { --_bg: var(--smoke); color: var(--navy-900); }
+.btn--outline { --_fg: var(--navy-900); --_bd: var(--navy-900); }
+.btn--outline:hover { --_bg: var(--navy-900); color: #fff; }
+
+/* ---------- Estructura (azul) ---------- */
+.section--tan { background: var(--smoke); }
+.site-header.is-scrolled, .site-header:has(.site-nav.is-open) { background: rgb(16 42 67 / .96); }
+.brand__mark, .site-header .brand__mark, .brand--light .brand__mark { fill: var(--green-300); }
+.site-nav a { color: #e4ecf4; }
+.site-nav a.is-active { background: rgb(255 255 255 / .14); color: #fff; box-shadow: inset 0 -2px 0 var(--green-300); }
+.site-nav a.site-nav__page:not(.is-active):not(.site-nav__cta) { color: #fff; }
+.site-nav a.site-nav__cta { background: var(--orange-600); border-color: var(--orange-600); color: #fff; }
+.site-nav a.site-nav__cta:hover, .site-nav a.site-nav__cta.is-active { background: var(--orange-700); border-color: var(--orange-700); box-shadow: none; }
+.hero__bg::after, .page-hero { border-color: var(--green-600); }
+.hero__bg::after { background: var(--green-600); }
+.site-footer { border-top-color: var(--green-600); }
+.price strong { color: var(--navy-900); }
+.closing { background: var(--navy-900); }
+.closing p { color: var(--navy-200); }
+.closing .btn--primary { --_bg: var(--orange-600); --_fg: #fff; --_bd: var(--orange-600); }
+.closing .btn--primary:hover { --_bg: var(--orange-700); --_bd: var(--orange-700); }
+.catalog-cta { background: linear-gradient(100deg, rgb(16 42 67 / .97) 0%, rgb(24 58 90 / .9) 60%, rgb(31 78 121 / .7) 100%), url('../assets/img/productos/m-013.jpg') center / cover no-repeat; }
+.catalog-help { border-left-color: var(--navy-900); background: var(--smoke); }
+
+/* Elementos sobre fondo azul (decoración, banners) */
+.section--earth .chip { border-color: rgb(255 255 255 / .3); color: #e4ecf4; }
+.chip[aria-pressed="true"] { background: #fff; border-color: #fff; color: var(--navy-900); }
+.deco { background: radial-gradient(ellipse at 10% 0%, rgb(43 122 75 / .28), transparent 55%), var(--navy-900); }
+
+/* ---------- Sostenibilidad (verde) ---------- */
+.value svg { stroke: var(--green-600); }
+.value { border-top-color: var(--green-600); }
+.process .eyebrow, .track__tag, .step__num { color: var(--green-600); }
+.step__num { opacity: .35; }
+.step__chips li { background: var(--green-100); color: var(--green-700); }
+.check-list li::before { border-color: var(--green-600); }
+.badge--recuperado, .badge--seminuevo { background: var(--green-600); color: #fff; }
+.badge--nuevo { background: var(--navy-600); }
+.badge--deco { background: var(--green-700); }
+.timeline__item--now::before { background: var(--green-600); border-color: var(--green-600); box-shadow: 0 0 0 6px rgb(43 122 75 / .18); }
+.timeline__year { background: var(--navy-900); }
+.history__badge { background: var(--navy-900); }
+.history__figure::before { border-color: var(--green-600); }
+
+/* ---------- Bloque de servicios (3 columnas) ---------- */
+.services { position: relative; z-index: 2; margin-top: clamp(-4rem, -6vw, -2.5rem); padding-bottom: clamp(3rem, 6vw, 5rem); }
+.services__grid { display: grid; gap: 1.25rem; }
+@media (min-width: 860px) { .services__grid { grid-template-columns: repeat(3, 1fr); } }
+.service {
+  --c: var(--navy-900); --c-bg: #e6edf5;
+  display: flex; flex-direction: column; padding: clamp(1.5rem, 3vw, 2.25rem); border-radius: var(--radius-lg);
+  background: #fff; box-shadow: var(--shadow); border-top: 5px solid var(--c);
+}
+.service--venta { --c: var(--orange-600); --c-bg: var(--orange-100); }
+.service--eco { --c: var(--green-600); --c-bg: var(--green-100); }
+.service--transporte { --c: var(--navy-900); --c-bg: #e6edf5; }
+.service__icon { display: grid; place-items: center; width: 64px; height: 64px; margin-bottom: 1.25rem; border-radius: 16px; background: var(--c-bg); }
+.service__icon svg { width: 34px; height: 34px; fill: none; stroke: var(--c); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.service h2 { font-family: var(--font-display); font-size: var(--fs-xl); margin-bottom: .5rem; }
+.service p { color: var(--text-muted); font-size: var(--fs-sm); }
+.service ul { display: grid; gap: .35rem; margin: 0 0 1.25rem; font-size: var(--fs-sm); }
+.service li { position: relative; padding-left: 1.1rem; }
+.service li::before { content: ''; position: absolute; left: 0; top: .6em; width: 6px; height: 6px; border-radius: 50%; background: var(--c); }
+.service__link { margin-top: auto; font-weight: 700; color: var(--navy-900); text-decoration: none; }
+.service__link:hover { color: var(--navy-600); text-decoration: underline; }
+
+/* ---------- Banner de confianza / flota ---------- */
+.fleet { background: var(--navy-900); color: #e4ecf4; padding: clamp(3.5rem, 7vw, 6rem) 0; position: relative; overflow: hidden; isolation: isolate; }
+.fleet::before {
+  content: ''; position: absolute; inset: 0; z-index: -1; opacity: .12;
+  background: url('../assets/img/productos/m-022.jpg') center / cover no-repeat; filter: grayscale(1);
+}
+.fleet__inner { display: grid; gap: 2.5rem; align-items: center; }
+@media (min-width: 960px) { .fleet__inner { grid-template-columns: 1.1fr 1fr; } }
+.fleet h2 { color: #fff; font-size: var(--fs-2xl); }
+.fleet p { color: var(--navy-200); max-width: 52ch; }
+.fleet__stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; border-radius: var(--radius); overflow: hidden; background: rgb(255 255 255 / .14); }
+.fleet__stats li { padding: 1.4rem; background: rgb(10 28 46 / .65); display: grid; gap: .15rem; }
+.fleet__stats strong { font-family: var(--font-display); font-size: clamp(1.6rem, 1.2rem + 1.5vw, 2.4rem); color: #fff; line-height: 1.1; }
+.fleet__stats span { font-size: var(--fs-sm); color: var(--navy-200); }
+.fleet .btn { margin-top: 1rem; }
+
+/* Hero: solo contenido (los datos clave pasan al banner de flota) */
+.hero { min-height: min(92svh, 860px); padding-bottom: clamp(6rem, 10vw, 8rem); }
+.hero__inner { grid-template-columns: 1fr !important; }
+.hero__content { max-width: 760px; }

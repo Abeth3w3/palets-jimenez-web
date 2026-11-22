@@ -1,9 +1,10 @@
 /* =========================================================
-   TOKENS DE DISEÑO — Palets Jiménez
-   Paleta tomada de la web actual (valores medidos en paletsjimenez.com):
-   - #B29068 fondo beige tostado        - #9E340F naranja rojizo (botón activo, marco)
-   - #FFF7F1 crema (área de contenido)  - #693B18 marrón oscuro (títulos)
-   - #5F4A32 marrón tierra              - #F5EBE7 crema rosado (texto sobre botón)
+   TOKENS DE DISEÑO — Palets Jiménez · Paleta "360° Logística y Sostenibilidad"
+   - Base neutra (60 %): blanco #FFFFFF y gris humo #F4F6F8
+   - Azul marino logístico (20 %) #102A43: cabecera, pie, títulos, banners → transporte
+   - Verde bosque (10 %) #2B7A4B: iconos, sellos y reciclaje → recuperación ecológica
+   - Naranja industrial (10 %) #E65100: SOLO botones de acción → compra-venta
+   El marrón de la madera aparece de forma natural en las fotografías.
    ========================================================= */
 @font-face {
   font-family: 'Archivo';
@@ -17,36 +18,56 @@
 }
 
 :root {
-  /* Marrón tierra */
-  --earth-950: #1f150d;
-  --earth-900: #2e2015;
-  --earth-800: #3e2c1d;
-  --earth-700: #5f4a32;
-  --earth-600: #7a6146;
-  /* Beige tostado */
-  --tan-500: #b29068;
-  --tan-400: #c4a682;
-  --tan-300: #d8c2a4;
-  --tan-200: #e9dcc8;
-  /* Crema */
-  --cream-100: #fff7f1;
-  --cream-200: #f5ebe7;
-  --cream-300: #efe2d6;
-  /* Naranja rojizo oscuro */
-  --rust-700: #7d290b;
-  --rust-600: #9e340f;
-  --rust-500: #b8471c;
-  --rust-200: #f3d3c3;
-  /* Marrón oscuro (texto) */
-  --brown-800: #4a2a11;
-  --brown-700: #693b18;
-  /* Acento cálido presente en la web actual (uso puntual) */
-  --amber-300: #ffa867;
+  /* Azul marino logístico */
+  --navy-950: #0a1c2e;
+  --navy-900: #102a43;
+  --navy-800: #183a5a;
+  --navy-700: #243b53;
+  --navy-600: #1f4e79;
+  --navy-500: #2f6aa3;
+  --navy-300: #9fb3c8;
+  --navy-200: #bcccdc;
+  /* Verde bosque */
+  --green-700: #1f5c38;
+  --green-600: #2b7a4b;
+  --green-300: #8fd3a8;
+  --green-100: #e3f2e8;
+  /* Naranja industrial (botones de acción) */
+  --orange-700: #b83f00;
+  --orange-600: #e65100;
+  --orange-100: #ffe7d9;
+  /* Neutros */
+  --white: #ffffff;
+  --smoke: #f4f6f8;
+  --gray-200: #e4e9ee;
+  --gray-300: #d0d8e0;
+  --gray-400: #a9b6c3;
 
-  --text: #33241a;
-  --text-muted: #6d5a49;
-  --ok: #4f6b2f;
-  --ok-bg: #e7ecd9;
+  /* ---- Alias heredados (los estilos existentes los usan) ---- */
+  --earth-950: var(--navy-950);
+  --earth-900: var(--navy-900);
+  --earth-800: var(--navy-900);
+  --earth-700: var(--navy-700);
+  --earth-600: var(--navy-600);
+  --tan-500: var(--gray-400);
+  --tan-400: var(--gray-400);
+  --tan-300: var(--navy-200);
+  --tan-200: var(--gray-200);
+  --cream-100: var(--white);
+  --cream-200: var(--smoke);
+  --cream-300: var(--gray-200);
+  --rust-700: var(--navy-900);   /* acento interactivo no comercial → azul */
+  --rust-600: var(--navy-600);
+  --rust-500: var(--navy-500);
+  --rust-200: var(--navy-200);
+  --brown-800: var(--navy-950);
+  --brown-700: var(--navy-900);
+  --amber-300: var(--green-300); /* acento claro sobre fondos oscuros */
+
+  --text: #1f2933;
+  --text-muted: #52606d;
+  --ok: var(--green-600);
+  --ok-bg: var(--green-100);
   --pending: #8a5a00;
   --pending-bg: #fbecc8;
 
@@ -64,9 +85,9 @@
   --radius-sm: 6px;
   --radius: 12px;
   --radius-lg: 20px;
-  --shadow-sm: 0 1px 2px rgb(46 32 21 / .08), 0 2px 8px rgb(46 32 21 / .06);
-  --shadow: 0 2px 6px rgb(46 32 21 / .08), 0 12px 32px rgb(46 32 21 / .12);
-  --shadow-lg: 0 24px 60px rgb(31 21 13 / .28);
+  --shadow-sm: 0 1px 2px rgb(16 42 67 / .08), 0 2px 8px rgb(16 42 67 / .06);
+  --shadow: 0 2px 6px rgb(16 42 67 / .08), 0 12px 32px rgb(16 42 67 / .12);
+  --shadow-lg: 0 24px 60px rgb(10 28 46 / .3);
 
   --container: 1200px;
   --gutter: clamp(1rem, .5rem + 2.5vw, 2.5rem);

@@ -16,7 +16,7 @@ function cardHTML(l) {
     <div class="loc__map" data-map="${esc(l.mapQuery)}" data-zoom="${l.approximate ? 13 : 15}" data-title="${esc(l.name)}">
       <div class="loc__map-consent">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
-        <button type="button" class="btn btn--primary btn--sm" data-load-map>Cargar mapa interactivo</button>
+        <button type="button" class="btn btn--light btn--sm" data-load-map>Cargar mapa interactivo</button>
         <p>Al cargar el mapa se conectará con Google Maps, que puede usar cookies propias.</p>
       </div>
     </div>
@@ -34,7 +34,7 @@ function cardHTML(l) {
       </dl>
       ${l.approximate ? '<p class="status status--pending">Mapa aproximado: dirección exacta pendiente de confirmar.</p>' : ''}
       <div class="loc__actions">
-        <a class="btn btn--primary" href="${mapsDir(l.mapQuery)}" target="_blank" rel="noopener noreferrer">Cómo llegar<span class="visually-hidden"> a ${esc(l.name)} (abre Google Maps)</span></a>
+        <a class="btn btn--navy" href="${mapsDir(l.mapQuery)}" target="_blank" rel="noopener noreferrer">Cómo llegar<span class="visually-hidden"> a ${esc(l.name)} (abre Google Maps)</span></a>
         ${l.phone ? `<a class="btn btn--outline" href="tel:+34${l.phone.replace(/\D/g, '')}">Llamar</a>` : ''}
       </div>
     </div>
