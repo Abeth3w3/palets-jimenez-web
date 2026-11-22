@@ -1,0 +1,76 @@
+/* =========================================================
+   TOKENS DE DISEÑO — Palets Jiménez
+   Paleta tomada de la web actual (valores medidos en paletsjimenez.com):
+   - #B29068 fondo beige tostado        - #9E340F naranja rojizo (botón activo, marco)
+   - #FFF7F1 crema (área de contenido)  - #693B18 marrón oscuro (títulos)
+   - #5F4A32 marrón tierra              - #F5EBE7 crema rosado (texto sobre botón)
+   ========================================================= */
+@font-face {
+  font-family: 'Archivo';
+  src: url('../assets/fonts/archivo-latin.woff2') format('woff2');
+  font-weight: 100 900; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Fraunces';
+  src: url('../assets/fonts/fraunces-latin.woff2') format('woff2');
+  font-weight: 100 900; font-style: normal; font-display: swap;
+}
+
+:root {
+  /* Marrón tierra */
+  --earth-950: #1f150d;
+  --earth-900: #2e2015;
+  --earth-800: #3e2c1d;
+  --earth-700: #5f4a32;
+  --earth-600: #7a6146;
+  /* Beige tostado */
+  --tan-500: #b29068;
+  --tan-400: #c4a682;
+  --tan-300: #d8c2a4;
+  --tan-200: #e9dcc8;
+  /* Crema */
+  --cream-100: #fff7f1;
+  --cream-200: #f5ebe7;
+  --cream-300: #efe2d6;
+  /* Naranja rojizo oscuro */
+  --rust-700: #7d290b;
+  --rust-600: #9e340f;
+  --rust-500: #b8471c;
+  --rust-200: #f3d3c3;
+  /* Marrón oscuro (texto) */
+  --brown-800: #4a2a11;
+  --brown-700: #693b18;
+  /* Acento cálido presente en la web actual (uso puntual) */
+  --amber-300: #ffa867;
+
+  --text: #33241a;
+  --text-muted: #6d5a49;
+  --ok: #4f6b2f;
+  --ok-bg: #e7ecd9;
+  --pending: #8a5a00;
+  --pending-bg: #fbecc8;
+
+  --font-body: 'Archivo', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+
+  --fs-xs: .8125rem;
+  --fs-sm: .9375rem;
+  --fs-md: 1.0625rem;
+  --fs-lg: clamp(1.125rem, 1rem + .5vw, 1.3125rem);
+  --fs-xl: clamp(1.5rem, 1.2rem + 1.2vw, 2rem);
+  --fs-2xl: clamp(2rem, 1.5rem + 2.2vw, 3.25rem);
+  --fs-hero: clamp(3rem, 1.8rem + 6vw, 6.5rem);
+
+  --radius-sm: 6px;
+  --radius: 12px;
+  --radius-lg: 20px;
+  --shadow-sm: 0 1px 2px rgb(46 32 21 / .08), 0 2px 8px rgb(46 32 21 / .06);
+  --shadow: 0 2px 6px rgb(46 32 21 / .08), 0 12px 32px rgb(46 32 21 / .12);
+  --shadow-lg: 0 24px 60px rgb(31 21 13 / .28);
+
+  --container: 1200px;
+  --gutter: clamp(1rem, .5rem + 2.5vw, 2.5rem);
+  --section-y: clamp(4.5rem, 3rem + 6vw, 8.5rem);
+  --header-h: 72px;
+  --ease: cubic-bezier(.2, .7, .2, 1);
+}
