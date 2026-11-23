@@ -9,6 +9,11 @@ export const company = {
   yearsExperience: 35, // "desde hace más de 35 años"
   phone: '925 52 17 87',
   mobile: '667 30 94 23',
+  // WhatsApp: número con prefijo de país, sin espacios ni "+". Mensaje inicial editable.
+  whatsapp: {
+    number: '34667309423',
+    message: 'Hola, quería información sobre palets.',
+  },
   email: 'paletsjimenez2016@gmail.com',
   schedule: {
     days: 'Lunes a viernes',

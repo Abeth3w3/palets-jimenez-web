@@ -98,3 +98,41 @@
 .hero { min-height: min(92svh, 860px); padding-bottom: clamp(6rem, 10vw, 8rem); }
 .hero__inner { grid-template-columns: 1fr !important; }
 .hero__content { max-width: 760px; }
+
+/* Hero con la foto de la nave de Numancia de la Sagra (versión ligera en móvil) */
+.hero__bg {
+  background:
+    linear-gradient(95deg, rgb(10 28 46 / .92) 0%, rgb(16 42 67 / .78) 42%, rgb(16 42 67 / .25) 75%, rgb(16 42 67 / .1) 100%),
+    url('../assets/img/nave-numancia.jpg') 70% 45% / cover no-repeat;
+}
+@media (max-width: 760px) {
+  .hero__bg {
+    background:
+      linear-gradient(180deg, rgb(10 28 46 / .55) 0%, rgb(10 28 46 / .82) 45%, rgb(10 28 46 / .92) 100%),
+      url('../assets/img/nave-numancia-960.jpg') 30% 30% / cover no-repeat;
+  }
+}
+.page-hero {
+  background:
+    linear-gradient(100deg, rgb(10 28 46 / .95) 0%, rgb(16 42 67 / .85) 55%, rgb(16 42 67 / .55) 100%),
+    url('../assets/img/nave-numancia-960.jpg') center 40% / cover no-repeat, var(--navy-900);
+}
+
+/* Una sola ubicación: tarjeta horizontal (mapa | datos) en escritorio */
+.locations__grid:has(> .loc:only-child) { grid-template-columns: 1fr; }
+@media (min-width: 900px) {
+  .loc:only-child { display: grid; grid-template-columns: 1.15fr 1fr; }
+  .loc:only-child .loc__map { aspect-ratio: auto; min-height: 420px; }
+}
+
+/* Botón de WhatsApp (color de marca de WhatsApp, excepción a la paleta) */
+.whatsapp-cta {
+  display: flex; align-items: center; gap: 1rem; margin: 1.5rem 0 0; padding: 1.1rem 1.35rem;
+  border-radius: var(--radius); background: #25d366; color: #0b3d1f; text-decoration: none;
+  box-shadow: 0 8px 22px rgb(37 211 102 / .3); transition: transform .2s, box-shadow .2s, background .2s;
+}
+.whatsapp-cta:hover { background: #1ebe5b; color: #062b15; transform: translateY(-2px); box-shadow: 0 12px 28px rgb(37 211 102 / .38); }
+.whatsapp-cta svg { flex: none; width: 44px; height: 44px; fill: #fff; }
+.whatsapp-cta strong { display: block; font-size: var(--fs-lg); line-height: 1.2; }
+.whatsapp-cta small { display: block; font-size: var(--fs-sm); font-weight: 500; }
+.quick-actions { margin-top: 1rem; }

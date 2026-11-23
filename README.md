@@ -61,6 +61,10 @@ En `js/data/company.js`, `contactConfig.endpoint`:
 
 Medidas incluidas: validación en cliente, campo trampa antispam, tiempo mínimo antes de enviar, casilla de privacidad obligatoria y ningún dato en la URL. **Importante:** la validación del servidor la tiene que hacer el endpoint, y la web tiene que publicarse con HTTPS (la actual va por HTTP).
 
+## WhatsApp
+
+El botón de WhatsApp de la página de contacto usa `company.whatsapp` en `js/data/company.js` (número con prefijo 34 y mensaje inicial). Si se llega desde una ficha del catálogo (`contacto.html?producto=…`), el mensaje ya menciona el producto.
+
 ## Mapas
 
 Google Maps se carga solo cuando el usuario pulsa "Cargar mapa interactivo" (así no se instalan cookies de terceros sin consentimiento). "Cómo llegar" abre Google Maps con el destino ya puesto.
@@ -74,7 +78,6 @@ Todo lo de esta lista aparece en la web marcado en ámbar como "Pendiente":
 | Año de fundación e hitos con fecha | Sección Historia (`index.html`, línea temporal) |
 | Horario con horas concretas | `company.js`, `locations.js` |
 | Código postal del almacén de Toledo | `locations.js` |
-| Dirección, teléfono y horario del almacén de Villaverde Alto (Madrid) | `locations.js` |
 | Precios | `products.js` (`price`) |
 | Peso de cada palet | `products.js` (`weightKg`) |
 | Carga del palet nuevo 210×120 | `products.js` |

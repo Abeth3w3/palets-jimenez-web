@@ -11,7 +11,7 @@
 export const locations = [
   {
     id: 'toledo',
-    name: 'Almacén de Toledo — Numancia de la Sagra',
+    name: 'Numancia de la Sagra (Toledo)',
     tag: 'Oficina y almacén',
     address: 'Avda. de la Industria, 173 A — Polígono Industrial Villa de Azaña',
     postalCode: null, // PENDIENTE de confirmar por la empresa
@@ -25,20 +25,5 @@ export const locations = [
     mapQuery: '40.087979,-3.860104', // coordenadas del mapa publicado en "Cómo llegar"
     approximate: false,
   },
-  {
-    id: 'madrid',
-    name: 'Almacén de Madrid — Villaverde Alto',
-    tag: 'Almacén',
-    address: null, // PENDIENTE: la web actual solo indica "polígono industrial de Villaverde Alto"
-    postalCode: null,
-    town: 'Villaverde Alto',
-    province: 'Madrid',
-    phone: null,
-    mobile: null,
-    schedule: null,
-    access: null,
-    pickup: 'Almacén cerrado: los palets se conservan a cubierto. Condiciones de recogida pendientes de confirmar.',
-    mapQuery: 'Polígono Industrial Villaverde Alto, Madrid',
-    approximate: true,
-  },
+  // El almacén de Villaverde Alto (Madrid) ya no está operativo (confirmado por la empresa, 23/11/2026).
 ];

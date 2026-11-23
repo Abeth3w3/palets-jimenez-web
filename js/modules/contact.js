@@ -124,4 +124,14 @@ export function initContact() {
   } else if (type && contactConfig.queryTypes.includes(type)) {
     form.elements.type.value = type;
   }
+
+  // Botones de WhatsApp: el mensaje inicial menciona el producto o el tipo de consulta si vienen en la URL
+  const waText = product
+    ? `Hola, me interesa el producto «${product.name}» (Ref. ${product.id}). ¿Podrían indicarme precio y disponibilidad?`
+    : type && contactConfig.queryTypes.includes(type)
+      ? `Hola, quería información sobre: ${type}.`
+      : company.whatsapp.message;
+  document.querySelectorAll('[data-whatsapp]').forEach((a) => {
+    a.href = `https://wa.me/${company.whatsapp.number}?text=${encodeURIComponent(waText)}`;
+  });
 }
