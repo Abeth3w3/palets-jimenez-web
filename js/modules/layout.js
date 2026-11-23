@@ -75,6 +75,7 @@ export function renderLayout() {
           <ul>
             <li><a href="${telHref(company.phone)}">Tel. ${esc(company.phone)}</a></li>
             <li><a href="${telHref(company.mobile)}">Móvil ${esc(company.mobile)}</a></li>
+            ${company.mobile2 ? `<li><a href="${telHref(company.mobile2)}">Móvil ${esc(company.mobile2)}</a></li>` : ""}
             <li><a href="mailto:${esc(company.email)}">${esc(company.email)}</a></li>
             <li>${esc(company.schedule.days)}</li>
           </ul>

@@ -9,6 +9,7 @@ export const company = {
   yearsExperience: 35, // "desde hace más de 35 años"
   phone: '925 52 17 87',
   mobile: '667 30 94 23',
+  mobile2: '600 80 97 44', // segundo móvil, tomado del rótulo de la nave
   // WhatsApp: número con prefijo de país, sin espacios ni "+". Mensaje inicial editable.
   whatsapp: {
     number: '34667309423',

@@ -19,6 +19,7 @@ export const locations = [
     province: 'Toledo',
     phone: '925 52 17 87',
     mobile: '667 30 94 23',
+    mobile2: '600 80 97 44',
     schedule: 'Lunes a viernes', // horas PENDIENTES
     access: 'Salida 40 de la A-42, dirección Yuncos.',
     pickup: 'Almacén cerrado: los palets se conservan a cubierto. Recogida y entregas a convenir con la empresa.',

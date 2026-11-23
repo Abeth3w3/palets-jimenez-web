@@ -10,7 +10,7 @@ const mapsEmbed = (q, zoom) => `https://maps.google.com/maps?q=${encodeURICompon
 const tel = (n) => `<a href="tel:+34${n.replace(/\D/g, '')}">${esc(n)}</a>`;
 
 function cardHTML(l) {
-  const phones = [l.phone && tel(l.phone), l.mobile && `${tel(l.mobile)} (móvil)`].filter(Boolean).join('<br>');
+  const phones = [l.phone && tel(l.phone), l.mobile && `${tel(l.mobile)} (móvil)`, l.mobile2 && `${tel(l.mobile2)} (móvil)`].filter(Boolean).join('<br>');
   return `
   <article class="loc reveal" aria-labelledby="loc-${esc(l.id)}">
     <div class="loc__map" data-map="${esc(l.mapQuery)}" data-zoom="${l.approximate ? 13 : 15}" data-title="${esc(l.name)}">
